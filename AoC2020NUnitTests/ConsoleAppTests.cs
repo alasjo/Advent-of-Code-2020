@@ -1,33 +1,32 @@
 using NUnit.Framework;
 using System;
 using System.IO;
+using AoC2020ConsoleApp;
+using System.Text;
 
 namespace AoC2020NUnitTests
 {
     public class ConsoleAppTests
     {
-        private const string Expected = "Hello AoC!";
-
         [SetUp]
         public void Setup()
         {
         }
 
         [Test]
-        public void TestConsoleHello()
+        public void TestMenu()
         {
-            using (var sw = new StringWriter())
-            {
-                Console.SetOut(sw);
-
-                string[] args = { };
-
-                AoC2020ConsoleApp.Program.Main(args);
-
-                var result = sw.ToString().Trim();
-
-                Assert.AreEqual(Expected, result);
-            }
+            Menu menu = new Menu(3);
+            menu.Skip(1);
+            StringBuilder expected = new StringBuilder();
+            expected.AppendLine("Advent of Code 2020");
+            expected.AppendLine("Esc to exit");
+            expected.AppendLine("");
+            expected.AppendLine("");
+            expected.AppendLine("[ ] Day 1");
+            expected.AppendLine("[X] Day 2");
+            expected.AppendLine("[ ] Day 3");
+            Assert.AreEqual(expected.ToString(), menu.ToString());
         }
     }
 }
