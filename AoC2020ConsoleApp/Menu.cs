@@ -1,6 +1,8 @@
 ﻿using AoC2020ClassLibrary;
+using AoC2020Days;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace AoC2020ConsoleApp
@@ -52,6 +54,25 @@ namespace AoC2020ConsoleApp
             }
 
             return builder.ToString();
+        }
+
+        private string GetPath(string fileName)
+        {
+            return Path.Combine(AppContext.BaseDirectory, "Input", fileName);
+        }
+
+        internal void Handle()
+        {
+            switch (selected)
+            {
+                case 0:
+                    Day1 d = new Day1(GetPath("Day1-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
+                    break;
+            }
         }
     }
 }

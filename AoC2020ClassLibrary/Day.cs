@@ -6,7 +6,10 @@ namespace AoC2020ClassLibrary
     {
         private readonly int number;
 
-        public Day(int nr) => number = nr;
+        public Day(int nr)
+        {
+            number = nr;
+        }
 
         public override String ToString()
         {

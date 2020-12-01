@@ -31,6 +31,9 @@ namespace AoC2020ConsoleApp
                     case ConsoleKey.PageDown:
                         menu.Skip(5);
                         break;
+                    case ConsoleKey.Enter:
+                        menu.Handle();
+                        break;
                 }
             } while (keyInfo.Key != ConsoleKey.Escape);
         }

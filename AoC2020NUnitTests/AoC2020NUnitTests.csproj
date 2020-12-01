@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -16,6 +16,19 @@
   <ItemGroup>
     <ProjectReference Include="..\AoC2020ClassLibrary\AoC2020ClassLibrary.csproj" />
     <ProjectReference Include="..\AoC2020ConsoleApp\AoC2020ConsoleApp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\TextFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Input\Day1-Part1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\TextFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
