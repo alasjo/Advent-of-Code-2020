@@ -4,7 +4,7 @@ namespace AoC2020ConsoleApp
 {
     public class Program
     {
-        private static int nrDays = 1;
+        private static int nrDays = 2;
 
         public static void Main(string[] args)
         {

@@ -21,7 +21,7 @@ namespace AoC2020Days
             }
         }
 
-        public int Part1()
+        public override int Part1()
         {
             foreach (var i in input)
             {
@@ -37,7 +37,7 @@ namespace AoC2020Days
             return 0;
         }
 
-        public int Part2()
+        public override int Part2()
         {
             foreach (var i in input)
             {

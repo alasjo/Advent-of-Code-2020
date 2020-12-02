@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AoC2020ClassLibrary
 {
@@ -49,6 +49,28 @@ namespace AoC2020ClassLibrary
                     ints.Add(Int32.Parse(line));
                 }
                 return ints;
+            }
+        }
+
+        public IEnumerable<string[]> SplitLinesByRegex(Regex re)
+        {
+            foreach (var line in lines)
+            {
+                MatchCollection matches = re.Matches(line);
+
+                foreach (Match match in matches)
+                {
+                    GroupCollection groups = match.Groups;
+
+                    string[] result = new string[groups.Count];
+
+                    for (int i = 0; i < groups.Count; i++)
+                    {
+                        result[i] = groups[i].Value;
+                    }
+
+                    yield return result;
+                }
             }
         }
     }
