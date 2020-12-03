@@ -69,14 +69,22 @@ namespace AoC2020ConsoleApp
             {
                 case 0:
                     d = new Day1(GetPath("Day1-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
                 case 1:
                     d = new Day2(GetPath("Day2-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
+                    break;
+                case 2:
+                    d = new Day3(GetPath("Day3-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1Long()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2Long()));
                     break;
             }
 
-            Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
-            Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
+
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
         }

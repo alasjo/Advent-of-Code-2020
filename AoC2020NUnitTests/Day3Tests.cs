@@ -8,7 +8,7 @@ using System.IO;
 
 namespace AoC2020NUnitTests
 {
-    class Day2Tests
+    class Day3Tests
     {
         [SetUp]
         public void Setup()
@@ -18,17 +18,17 @@ namespace AoC2020NUnitTests
         [Test]
         public void TestPart1()
         {
-            Day2 d = new Day2(Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Input", "Day2-Part1.txt"));
+            Day3 d = new Day3(Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Input", "Day3-Part1.txt"));
 
-            Assert.AreEqual(3, d.Part1());
+            Assert.AreEqual(7, d.Part1Long());
         }
 
         [Test]
         public void TestPart2()
         {
-            Day2 d = new Day2(Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Input", "Day2-Part1.txt"));
+            Day3 d = new Day3(Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Input", "Day3-Part1.txt"));
 
-            Assert.AreEqual(2, d.Part2());
+            Assert.AreEqual(336, d.Part2Long());
         }
     }
 }

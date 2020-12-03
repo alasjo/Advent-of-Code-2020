@@ -18,5 +18,7 @@ namespace AoC2020ClassLibrary
 
         public virtual int Part1() { return 0; }
         public virtual int Part2() { return 0; }
+        public virtual long Part1Long() { return 0; }
+        public virtual long Part2Long() { return 0; }
     }
 }

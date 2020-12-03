@@ -35,5 +35,18 @@ namespace AoC2020ClassLibrary
                 yield return index;
             }
         }
+
+        public static int Longest(IEnumerable<string> list)
+        {
+            int longest = 0;
+            foreach (var item in list)
+            {
+                if (item.Length > longest)
+                {
+                    longest = item.Length;
+                }
+            }
+            return longest;
+        }
     }
 }
