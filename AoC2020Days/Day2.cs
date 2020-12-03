@@ -34,7 +34,9 @@ namespace AoC2020Days
 
                 SortedDictionary<char, int> histogram = Analysis<char>.Histogram(res[4]);
 
-                if (histogram.ContainsKey(res[3][0]) && histogram[res[3][0]] >= min && histogram[res[3][0]] <= max)
+                if (histogram.ContainsKey(res[3][0])
+                    && histogram[res[3][0]] >= min
+                    && histogram[res[3][0]] <= max)
                 {
                     count++;
                 }
