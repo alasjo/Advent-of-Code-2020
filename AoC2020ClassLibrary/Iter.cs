@@ -68,6 +68,17 @@ namespace AoC2020ClassLibrary
             }
         }
 
+        public T ItemAt(int index)
+        {
+            Node t = head;
+            int i = 0;
+            while (i < index)
+            {
+                t = t.Next;
+            }
+            return t.Data;
+        }
+
         public void Add(T t)
         {
             Node node = new Node(t);

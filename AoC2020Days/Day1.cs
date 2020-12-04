@@ -1,35 +1,27 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using AoC2020ClassLibrary;
 
 namespace AoC2020Days
 {
     public class Day1: Day
     {
-        private Iter<int> input;
+        private int[] input;
 
         public Day1(string path): base(1)
         {
             FileParser parser = new FileParser(path);
-            input = new Iter<int>(parser.Integers);
-        }
-
-        public Iter<int> Input
-        {
-            get
-            {
-                return input;
-            }
+            input = parser.Integers.ToArray();
         }
 
         public override int Part1()
         {
-            foreach (var i in input)
+            for (int i = 0; i < input.Length; i++)
             {
-                foreach (var j in input)
+                for (int j = i; j < input.Length; j++)
                 {
-                    if (i + j == 2020)
+                    if (input[i] + input[j] == 2020)
                     {
-                        return i * j;
+                        return input[i] * input[j];
                     }
                 }
             }
@@ -39,15 +31,15 @@ namespace AoC2020Days
 
         public override int Part2()
         {
-            foreach (var i in input)
+            for (int i = 0; i < input.Length; i++)
             {
-                foreach (var j in input)
+                for (int j = i; j < input.Length; j++)
                 {
-                    foreach (var k in input)
+                    for (int k = j; k < input.Length; k++)
                     {
-                        if (i + j + k == 2020)
+                        if (input[i] + input[j] + input[k] == 2020)
                         {
-                            return i * j * k;
+                            return input[i] * input[j] * input[k];
                         }
 
                     }

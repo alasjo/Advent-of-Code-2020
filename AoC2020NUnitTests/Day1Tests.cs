@@ -22,5 +22,13 @@ namespace AoC2020NUnitTests
 
             Assert.AreEqual(514579, d.Part1());
         }
+
+        [Test]
+        public void TestPart2()
+        {
+            Day1 d = new Day1(Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Input", "Day1-Part1.txt"));
+
+            Assert.AreEqual(241861950, d.Part2());
+        }
     }
 }
