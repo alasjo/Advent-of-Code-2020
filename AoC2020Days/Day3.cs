@@ -9,7 +9,7 @@ namespace AoC2020Days
     {
         private Map map;
 
-        public Day3(string path) : base(2)
+        public Day3(string path) : base(3)
         {
             FileParser parser = new FileParser(path);
             map = new Map(Analysis<string>.Longest(parser.Lines), parser.Lines.Count);
