@@ -44,5 +44,15 @@ namespace AoC2020NUnitTests
 
             Assert.True(pass.IsValid);
         }
+
+        [Test]
+        public void TestBoardingPass()
+        {
+            /**
+             * : row 70, column 7, seat ID 567.
+             * : row 14, column 7, seat ID 119.
+             * : row 102, column 4, seat ID 820.
+             */
+        }
     }
 }

@@ -65,25 +65,30 @@ namespace AoC2020ConsoleApp
         {
             Day d = new Day(0);
 
-            switch (selected)
+            switch (selected + 1)
             {
-                case 0:
+                case 1:
                     d = new Day1(GetPath("Day1-Part1.txt"));
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
-                case 1:
+                case 2:
                     d = new Day2(GetPath("Day2-Part1.txt"));
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
-                case 2:
+                case 3:
                     d = new Day3(GetPath("Day3-Part1.txt"));
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1Long()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2Long()));
                     break;
-                case 3:
+                case 4:
                     d = new Day4(GetPath("Day4-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
+                    break;
+                case 5:
+                    d = new Day5(GetPath("Day5-Part1.txt"));
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
