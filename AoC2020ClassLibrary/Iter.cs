@@ -44,9 +44,9 @@ namespace AoC2020ClassLibrary
         }
 
         private Node head;
-        private long size;
+        private int size;
 
-        public long Count
+        public int Count
         {
             get
             {
@@ -71,12 +71,25 @@ namespace AoC2020ClassLibrary
         public T ItemAt(int index)
         {
             Node t = head;
-            int i = 0;
-            while (i < index)
+            int i = size - index;
+            while (i > index)
             {
                 t = t.Next;
+                i--;
             }
             return t.Data;
+        }
+
+        public T Head
+        {
+            get
+            {
+                return head.Data;
+            }
+            set
+            {
+                head.Data = value;
+            }
         }
 
         public void Add(T t)

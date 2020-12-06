@@ -92,6 +92,11 @@ namespace AoC2020ConsoleApp
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
+                case 6:
+                    d = new Day6(GetPath("Day6-Part1.txt"));
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
+                    break;
             }
 
 

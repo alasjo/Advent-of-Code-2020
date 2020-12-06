@@ -159,7 +159,7 @@ namespace AoC2020ClassLibrary
                 }
 
                 int eYr = ValueToInteger(eyr);
-                if (eYr < 2010 || eYr > 2030)
+                if (eYr < 2020 || eYr > 2030)
                 {
                     return false;
                 }

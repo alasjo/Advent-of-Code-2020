@@ -37,10 +37,10 @@ namespace AoC2020NUnitTests
 
             Passport pass = Passport.FromString(input);
 
-            Assert.AreEqual("byr: iyr:123 eyr: hgt:ab\nhcl:#112233 ecl: pid: cid:", pass.ToString());
+            Assert.AreEqual("byr: iyr:123 eyr: hgt:ab hcl:#112233 ecl: pid: cid:", pass.ToString());
             Assert.False(pass.IsValid);
 
-            pass = Passport.FromString("byr:1   iyr:2 eyr:3 hgt:4\nhcl:#556677 ecl:8 pid:9");
+            pass = Passport.FromString("byr:1920   iyr:2012 eyr:2022 hgt:170cm\nhcl:#556677 ecl:gry pid:123456789");
 
             Assert.True(pass.IsValid);
         }
