@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using System.Collections.Generic;
+using System;
 using System.IO;
 using AoC2020ClassLibrary;
 
@@ -53,6 +53,33 @@ namespace AoC2020NUnitTests
              * : row 14, column 7, seat ID 119.
              * : row 102, column 4, seat ID 820.
              */
+        }
+
+        [Test]
+        public void TestTree()
+        {
+            Tree<int> tree = new Tree<int>(0);
+
+            for (int i = 1; i < 5; i++)
+            {
+                tree.AddChild(i);
+                tree.ChildAt(i - 1).AddChild(i + 4);
+            }
+
+            Action<int> visitor;
+            int count = 0;
+            int sumn = 0;
+
+            visitor = delegate (int c)
+            {
+                count++;
+                sumn += c;
+            };
+
+            Tree<int>.Traverse(tree, visitor);
+
+            Assert.AreEqual(9, count);
+            Assert.AreEqual(36, sumn);
         }
     }
 }
