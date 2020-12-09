@@ -46,9 +46,22 @@ namespace AoC2020ClassLibrary
                 List<int> ints = new List<int>();
                 foreach (var line in lines)
                 {
-                    ints.Add(Int32.Parse(line));
+                    ints.Add(int.Parse(line));
                 }
                 return ints;
+            }
+        }
+
+        public List<long> Longs
+        {
+            get
+            {
+                List<long> longs = new List<long>();
+                foreach (var line in lines)
+                {
+                    longs.Add(long.Parse(line));
+                }
+                return longs;
             }
         }
 

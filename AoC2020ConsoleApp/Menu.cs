@@ -107,6 +107,11 @@ namespace AoC2020ConsoleApp
                     Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1()));
                     Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2()));
                     break;
+                case 9:
+                    d = new Day9(GetPath("Day9-Part1.txt"), 25);
+                    Console.WriteLine(String.Format("Result Part 1: {0}", d.Part1Long()));
+                    Console.WriteLine(String.Format("Result Part 2: {0}", d.Part2Long()));
+                    break;
             }
 
             Console.WriteLine("Press any key to continue");
