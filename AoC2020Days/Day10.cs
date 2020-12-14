@@ -26,7 +26,7 @@ namespace AoC2020Days
         {
             int jolt = 0;
             int ones = 0;
-            int threes = 1;
+            int threes = 0;
             foreach (var n in adapters)
             {
                 if (n - jolt == 1)
